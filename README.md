@@ -59,13 +59,13 @@ _“Are there any Mexican restaurants within 10 miles of Half Moon Bay airport?�
 
 _“Please provide a VFR flight plan departing Liverpool this week with final destination of Dublin. Please ensure all waypoints have AVGAS available and supply 3 overnight accommodations at each waypoint within a 5 mile radius of the waypoint. Please ensure no over water crossings greater than 50 nautical miles. Aircraft is a small single engine Cessna. Please keep maximum flight ceiling below 8000ft. Please ensure a minimum of 1 hour of daylight upon landing at each waypoint and final destination. Please provide the best flight itinerary to minimize flight times and total travel duration. Please check weather conditions enroute to safely accommodate flight restrictions. I must arrive in Dublin no later than 2pm on Dec 31st. Please also provide a skyvector url.”_
 
-Output (PDF transcript): https://drive.google.com/file/d/17q2CjCYwkId2-hwgJG_Selg2ZtNvyx0r/view
+[Output (PDF transcript)](https://drive.google.com/file/d/17q2CjCYwkId2-hwgJG_Selg2ZtNvyx0r/view)
 
 _“Please create a VFR only flight plan for a small Cessna with a 300nm range only landing at airports with AVGAS departing tomorrow morning from Yucca Valley CA with final destination of MIA. Avoid any over water routes greater than 50nm. Maximum ceiling is 9000ft. Require at least 1 hr of sunlight left in the day upon landing at any waypoint including the Destination. List at least 3 available lodging accommodations within a 5 mile radius of any waypoint. Include a detailed itinerary to minimize total travel time. Include a skyvector url.”_
 
-Output (PDF transcript): https://drive.google.com/file/d/1JZLumW1A1m7I06RdF_ToR6qVeop1Cxte/view 
+[Output (PDF transcript)](https://drive.google.com/file/d/1JZLumW1A1m7I06RdF_ToR6qVeop1Cxte/view)
 
-For a more in-depth and historical discussion of the teckel Navigation Toolkit, please see this blog article: https://blogflylogical.wordpress.com/2025/12/20/flight-nav-planning-with-ai/
+For a more in-depth and historical discussion of the teckel Navigation Toolkit, please see [this blog article](https://blogflylogical.wordpress.com/2025/12/20/flight-nav-planning-with-ai/)
 
 ## How to Use the teckel Toolkits
 
