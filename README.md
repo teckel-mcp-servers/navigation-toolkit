@@ -26,14 +26,48 @@ _“What is the latitude and longitude of UK postcode IM4 7BN?”_
 _“If I drive from Berlin to Munich tomorrow, departing at 9am local time, will it be dark when I arrive?”_
 
 ## General Aviation
-Accurate computation of distances between points on Earth using the World Geodetic System 1984 (WGS84), the geodetic reference system that defines the Earth’s shape and size as an oblate spheroid, the standard for the Global Positioning System (GPS). The distances can be computed either as great-circles (i.e., shortest distance between the two points) or rhumblines (i.e., the distance measured along a straight line drawn on a mercator projection map).
-Accurate computation of the end-point for a given start-point, bearing, and range. The bearing can be referenced to either true or magnetic north (if magnetic, the magnetic variation is automatically calculated and corrected for), and the track can be specified as a great circle or rhumbline.
-
+### Provides tools for the following 
+<ul>
+<li>Accurate computation of distances between points on Earth using the World Geodetic System 1984 (WGS84), the geodetic reference system that defines the Earth’s shape and size as an oblate spheroid, the standard for the Global Positioning System (GPS). The distances can be computed either as great-circles (i.e., shortest distance between the two points) or rhumblines (i.e., the distance measured along a straight line drawn on a mercator projection map).
+</li>
+ <li>
+Accurate computation of the end-point for a given start-point, bearing, and range. The bearing can be referenced to either true or magnetic north (if magnetic, the magnetic variation is automatically calculated and corrected for), and the track can be specified as a great circle or rhumbline.</li>
+<li>
 Search for airports within a specified range from any location in the world, with multiple optional filters (such as “must have AVGAS” etc). For the US only, can also search for navaids, fixes, features, and obstacles.
-Obtain the latest aviation weather report (METAR) and forecast (TAF) for any worldwide ICAO designated weather station (in raw and decoded formats). Find the nearest ICAO designated weather station to a given location, or multiple stations within a specified range of that location.
-
+</li>
+<li>
+Obtain the latest aviation weather report (METAR) and forecast (TAF) for any worldwide ICAO designated weather station (in raw and decoded formats). 
+</li>
+<li>
+Find the nearest ICAO designated weather station to a given location, or multiple stations within a specified range of that location.
+</li>
+<li>
 Computation of aviation-pertinent atmospheric parameters (versus altitude) given the measured temperature and pressure (from METARs).
-Perform VFR (Visual-Flight-Rules) flight route calculations between specified origin and destination airfields, plus up to ten optional intermediate waypoints (when not routing direct). Automatically computes wind corrections (using latest METARs along the route, and assuming a power-law extrapolation from METAR measured winds at 10m AGL to wind aloft), magnetic variation, and sunlight conditions (e.g., if daylight, twilight, or night-time at each waypoint plus direction (azimuth and zenith) to the sun relative to flight track (to assess if glare will be an issue). For the origin and departure airfields, gives essential information for each runway (surface, dimensions) plus the crosswind and headwind/tailwind components (computed from latest METARs), plus, where the information is available, details on runway lighting, visual approach aids, and instrument approach aids. Also provides the communication frequencies for the origin and departure airfields, plus where the information is available, telephone contact details, operating hours, and whether PPR is required. Utilizes current atmospheric conditions (from latest METAR data) to model the atmosphere (and its deviations from the International Standard Atmosphere) in order to compute for example, density altitude at the departure airfield, true airspeed (TAS), Mach number, and estimated cloud-base and freezing altitude along the route, and pressure altitude at each waypoint (i.e., the altitude displayed on the altimeter when set at standard pressure setting, useful for flight level determination). All navigation timings are presented in UTC as well as in local time (taking account of timezone and Daylight-Savings corrections). As well as providing a route summary (total distance, flight time, fuel consumption), all relevant data is provided per leg to facilitate the generation of a navlog (e.g., groundspeed, distance, timings, magnetic heading and true track, fuel used, etc). Aircraft Performance and route profile data (indicated airspeed, altitude, fuel flow rate) can be specified or default values (100kts, 2500ft 8 USgal/hour) are used if omitted. The latest METAR (current weather) and TAF (forecasts) reports are provided for each waypoint. A URL is also provided which enables the route to be viewed on skyvector.com (via any web browser). From there, the route can be exported to popular pilot apps such as Garmin Pilot, ForeFlight etc.
+</li>
+<li>
+Perform VFR (Visual-Flight-Rules) flight route calculations between specified origin and destination airfields, plus up to ten optional intermediate waypoints (when not routing direct). 
+</li>
+<ul>
+ <li>Automatically computes wind corrections (using latest METARs along the route, and assuming a power-law extrapolation from METAR measured winds at 10m AGL to wind aloft), magnetic variation, and sunlight conditions (e.g., if daylight, twilight, or night-time at each waypoint plus direction (azimuth and zenith) to the sun relative to flight track (to assess if glare will be an issue). 
+</li>
+<li>For the origin and departure airfields, gives essential information for each runway (surface, dimensions) plus the crosswind and headwind/tailwind components (computed from latest METARs), plus, where the information is available, details on runway lighting, visual approach aids, and instrument approach aids. </li>
+<li>
+Also provides the communication frequencies for the origin and departure airfields, plus where the information is available, telephone contact details, operating hours, and whether PPR is required. 
+</li>
+ <li>Utilizes current atmospheric conditions (from latest METAR data) to model the atmosphere (and its deviations from the International Standard Atmosphere) in order to compute for example, density altitude at the departure airfield, true airspeed (TAS), Mach number, and estimated cloud-base and freezing altitude along the route, and pressure altitude at each waypoint (i.e., the altitude displayed on the altimeter when set at standard pressure setting, useful for flight level determination). 
+</li>
+ <li>
+All navigation timings are presented in UTC as well as in local time (taking account of timezone and Daylight-Savings corrections). As well as providing a route summary (total distance, flight time, fuel consumption), all relevant data is provided per leg to facilitate the generation of a navlog (e.g., groundspeed, distance, timings, magnetic heading and true track, fuel used, etc). 
+</li>
+ <li>Aircraft Performance and route profile data (indicated airspeed, altitude, fuel flow rate) can be specified or default values (100kts, 2500ft 8 USgal/hour) are used if omitted. 
+</li>
+<li>
+ The latest METAR (current weather) and TAF (forecasts) reports are provided for each waypoint. 
+</li>
+ <li>
+A URL is also provided which enables the route to be viewed on skyvector.com (via any web browser). From there, the route can be exported to popular pilot apps such as Garmin Pilot, ForeFlight etc.
+  </li>
+</ul></ul>
 
 ### LLM prompt examples using these tools:
 
@@ -55,7 +89,7 @@ _“Perform the flight route calculations for a VFR flight from Palo Alto Airpor
 Then,
 _“Are there any Mexican restaurants within 10 miles of Half Moon Bay airport?”_
 
-###In the following two examples note that any overwater routes are constrained.
+### In the following two examples note that any overwater routes are constrained.
 
 _“Please provide a VFR flight plan departing Liverpool this week with final destination of Dublin. Please ensure all waypoints have AVGAS available and supply 3 overnight accommodations at each waypoint within a 5 mile radius of the waypoint. Please ensure no over water crossings greater than 50 nautical miles. Aircraft is a small single engine Cessna. Please keep maximum flight ceiling below 8000ft. Please ensure a minimum of 1 hour of daylight upon landing at each waypoint and final destination. Please provide the best flight itinerary to minimize flight times and total travel duration. Please check weather conditions enroute to safely accommodate flight restrictions. I must arrive in Dublin no later than 2pm on Dec 31st. Please also provide a skyvector url.”_
 
