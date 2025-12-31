@@ -1,4 +1,4 @@
-# navigation-toolkit
+# navigation toolkit
 This MCP server gives LLM/AI/Agents the ability to provide accurate navigation information. There are three main application areas (all can be combined): time &amp; place, road-trips, and general aviation.
 
 ## Time and Place
@@ -78,7 +78,7 @@ Whatever the client, the configuration is essentially the same. Namely, provide 
 ```
 {
  "mcpServers": {    
-    "teckel-navigation-toolbox": {
+    "teckel-navigation-toolkit": {
       "url": "https://mcp-servers.bh.tkllabs.io:9780/navigation-mcp",
       "headers": {
         "Authorization": "Bearer d1e12345-c234-45a6-9b76-1234567891ff"
