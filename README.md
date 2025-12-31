@@ -1,5 +1,5 @@
-# navigation-toolbox
-The main purpose of the Navigation Toolbox is to give LLM/AI/Agents the ability to provide accurate navigation information. There are three main application areas (all can be combined): time &amp; place, road-trips, and general aviation.
+# navigation-toolkit
+This MCP server gives LLM/AI/Agents the ability to provide accurate navigation information. There are three main application areas (all can be combined): time &amp; place, road-trips, and general aviation.
 
 ## Time and Place
 Accurate determination of local time and sun position at any place in the world, taking into account time zones and daylight savings corrections.
@@ -55,7 +55,7 @@ _“Perform the flight route calculations for a VFR flight from Palo Alto Airpor
 Then,
 _“Are there any Mexican restaurants within 10 miles of Half Moon Bay airport?”_
 
-## How to Use the teckel Toolboxes
+## How to Use the teckel Toolkits
 
 ### First generate an API key using the teckel App.
 
@@ -90,7 +90,7 @@ Whatever the client, the configuration is essentially the same. Namely, provide 
 NOTE: This configuration assumes the HTTP(streamable) protocol. If your client requires the older (now legacy) SSE protocol, replace “navigation-mcp” with “navigation-sse”.
 
 ### MCP JSON Configuration (example for use with n8n)
-Similarly, for use with n8n, below is the JSON code snippet for a sample workflow which accesses the teckel Ethereum and Navigation Toolkits MCP server. (Save this entire snippet to a .json file; then import the file to your n8n workflow.) You will need to replace the credentials with your own “Bearer Auth” credential within n8n (using your teckel API key as the “Bearer token”). 
+Similarly, for use with n8n, below is the JSON code snippet for a sample workflow which accesses the teckel Ethereum and Navigation Toolkits MCP servers. (Save this entire snippet to a .json file; then import the file to your n8n workflow.) You will need to replace the credentials with your own “Bearer Auth” credential within n8n (using your teckel API key as the “Bearer token”). 
 ```
 {
   "name": "Teckel Tools MCP Example",
