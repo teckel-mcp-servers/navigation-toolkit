@@ -1,7 +1,7 @@
 # navigation-toolbox
 The main purpose of the Navigation Toolbox is to give LLM/AI/Agents the ability to provide accurate navigation information. There are three main application areas (all can be combined): time &amp; place, road-trips, and general aviation.
 
-# Time and Place
+## Time and Place
 Accurate determination of local time and sun position at any place in the world, taking into account time zones and daylight savings corrections.
 LLM prompt examples using these tools:
 
@@ -13,7 +13,7 @@ LLM prompt examples using these tools:
 
 “My flight is departing for San Francisco from London at 3 hours from now. The flight will take ten hours. What time will it be when I arrive in San Francisco, and what will the lighting conditions be?”
 
-# Roadtrips
+## Roadtrips
 Accurate determination of driving distances and times anywhere in the world, taking into account current traffic (and allowing for ferry trip times if water crossing required). Computation of latitude and longitude for any place specified by address, postal code, name, landmark, etc. Search for hotels, restaurants, or any other typical feature, within a specified range of any location.
 LLM prompt examples using these tools:
 
@@ -25,7 +25,7 @@ LLM prompt examples using these tools:
 
 “If I drive from Berlin to Munich tomorrow, departing at 9am local time, will it be dark when I arrive?”
 
-# General Aviation
+## General Aviation
 Accurate computation of distances between points on Earth using the World Geodetic System 1984 (WGS84), the geodetic reference system that defines the Earth’s shape and size as an oblate spheroid, the standard for the Global Positioning System (GPS). The distances can be computed either as great-circles (i.e., shortest distance between the two points) or rhumblines (i.e., the distance measured along a straight line drawn on a mercator projection map).
 Accurate computation of the end-point for a given start-point, bearing, and range. The bearing can be referenced to either true or magnetic north (if magnetic, the magnetic variation is automatically calculated and corrected for), and the track can be specified as a great circle or rhumbline.
 
@@ -55,4 +55,40 @@ Then,
 Then,
 “Are there any Mexican restaurants within 10 miles of Half Moon Bay airport?”
 
+# How to Use the teckel Toolboxes
+
+First generate an API key using the teckel App.
+
+Do the following:
+
+1. Install the teckel App and create (or import) an Ethereum Account.
+
+2. Navigate to the Accounts page by tapping on the wallet icon in the upper right corner of the App home screen. Access the API Key Manager for the created or imported Ethereum Account by tapping “Manage API Key” on the Accounts page.
+
+3. Use the API key when making calls to the endpoints. All the available endpoints are available via the teckel App, incorporating the actual API key for the given Ethereum Account.
+
+4. For illustrative purposes, we will use the following fake key d1e12345-c234-45a6-9b76-1234567891ff in the examples presented below. You would substitute your actual API key in place of this fake key.
+
+Next, decide if you are using the MCP servers or RESTful (API) to access the tools.
+
+# Using the MCP Servers
+## Configure your MCP client-of-choice
+Whatever the client, the configuration is essentially the same. Namely, provide the client with the MCP server endpoint and access credentials. These are typically in the form of a configuration JSON snippet, using your API key as the “Bearer” token in the “Authorization” tag. For example, here is the precise configuration for use with the Cursor desktop app (navigate within the Cursor app to the Cursor Settings -> Tools & MCP -> + New MCP server and enter these details using your actual teckel API key to replace this fake one).
+##MCP JSON configuration (example for use with Cursor)
+{
+ "mcpServers": {
+    "teckel-ethereum-toolbox": {
+      "url": "https://mcp-servers.bh.tkllabs.io:9780/ethereum-mcp",
+      "headers": {
+        "Authorization": "Bearer d1e12345-c234-45a6-9b76-1234567891ff"
+      }
+    },
+    "teckel-navigation-toolbox": {
+      "url": "https://mcp-servers.bh.tkllabs.io:9780/navigation-mcp",
+      "headers": {
+        "Authorization": "Bearer d1e12345-c234-45a6-9b76-1234567891ff"
+      }
+    }   
+  }
+}
 
